@@ -7,6 +7,7 @@
 		<link rel="stylesheet" type="text/css" href="styles.css">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" type="text/css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	</head>
 	<body>
 		<a href="index.html">
@@ -27,33 +28,72 @@
 		</div>
 
 		<div class="image-container">
-			<img src="assets/kitten.jpg" alt="kitten">
+			<picture>
+				<source srcset="assets/kitten.jpg" media="(max-width: 599px)">
+				<source srcset="assets/kitten-wide.jpg">	
+				<img src="assets/kitten.jpg" alt="kitten">
+		</picture>
 		</div>
 
 		<!--Preview Sections-->	
 		<a href="family.html">
-			<div class="preview">
-				<h4>FAMILY</h4>
+			<div class="preview" id="family">
+				<h4>Family</h4>
 				<p>Meet my wife and son and learn more about our family and what makes us interesting</p>
 			</div>
 		</a>
 		<a href="hobbies.html">
 			<div class="preview">
-				<h4>HOBBIES</h4>
+				<h4>Hobbies</h4>
 				<p>Read about what I do in my spare time. It might not be what you'd expect...
 			</div>
 		</a>
 		<a href="career.html">
 			<div class="preview">
-				<h4>CAREER</h4>
+				<h4>Career</h4>
 				<p>See where my career has brought me and where it is taking me</p>
 			</div>
 		</a>
 		<a href="contact.html">
 			<div class="preview">
-				<h4>CONTACT ME</h4>
+				<h4>Contact Me</h4>
 				<p>Want to get in touch with me? Find out how you can here.</p>
 			</div>	
 		</a>
+
+		<div id="footer">
+			<ul>
+				<li class="footer-nav"><a href="#family">Family</a></li>
+				<li class="footer-nav"><a href="#hobbies">Hobbies</a></li>
+				<li class="footer-nav"><a href="#career">Career</a></li>
+				<li class="footer-nav"><a href="#contact">Contact Me</a></li>
+			</ul>	
+			<div class="bottom-container">
+				<div class="copyright">
+					&copy Chris Faires
+				</div>	
+				<ul class="social">
+					<li class="social-link"><a href="https://www.facebook.com/cfaires1" target="_blank" ><img class="social-icon" src="assets/facebook-sociocon.png"></a></li>
+					<li class="social-link"><a href="https://www.linkedin.com/profile/view?id=127661208&trk=nav_responsive_tab_profile" target="_blank" ><img class="social-icon" src="assets/linkedin-sociocon.png"></a></li>
+					<li class="social-link"><a href="mailto:faires.chris@gmail.com"><img class="social-icon" src="assets/email-sociocon.png"></a></li>
+					<li class="social-link"><a href="https://plus.google.com/u/0/107365011944887962165/posts/p/pub" target="_blank" ><img class="social-icon" src="assets/google-sociocon.png"></a></li>
+					<li class="social-link"><a href="https://github.com/cfaires" target="_blank" ><img class="social-icon" src="assets/github-sociocon.png"></a></li>
+					<li class="social-link"><a href="https://twitter.com/fairesbueller" target="_blank" ><img class="social-icon" src="assets/twitter-sociocon.png"></a></li>
+				</ul>
+			</div>	
+		</div>
+
+		<script>
+			$("h3").click(function(){
+				$("h3").css("background-color", "yellow");
+			});
+
+			$(function() {
+				$("#accordion").accordion();
+			});
+		</script>
+
+
+
 	</body>	
 </html>

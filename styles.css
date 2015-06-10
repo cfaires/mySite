@@ -6,7 +6,7 @@ body {
 	margin: 0;
 }
 .title {
-	font-size: 2em;
+	font-size: 1.4em;
 	color: #fff;
 }
 .preview {
@@ -39,7 +39,25 @@ ul {
 	width:100%;
 
 }
-li {
+
+li.social-link, .social-icon {
+	float:left;
+	padding-bottom: 10px;
+	margin:0;
+	width:28px;
+}
+div.copyright, .social {
+	float:left;
+	text-align: center;
+	width:auto;
+	padding: 0px 8px;
+}
+.social {
+	width:auto;
+	float:right;
+}
+
+.footer-nav, .nav-link {
 	float:left;
 	text-align: center;
 	background-color: #ff4050;
@@ -59,7 +77,19 @@ img {
 	height: auto;
 }
 
+.copyright {
+	font-size: 12px;
+	text-align: center;
+	padding-bottom: 10px;
+}
 
+.footer-nav {
+	margin-top: 20px;
+}
+.social-icon {
+	max-height: 28px;
+	max-width: 28px;
+}
 
 /**************** SMALLEST MOBILE SIZING 500px AND SMALLER *****************/
 @media screen and (max-width: 500px) {
@@ -67,14 +97,10 @@ img {
 .family, .hobbies, .career, .contact {
 	width: 100%;
 }
-.preview p {
-	display: none;
-}
-.nav {
+.preview p, .nav, .footer-nav {
 	display: none;
 }
 h1 {
-	font-size: 58px;
 	margin-top: 5px;
 	margin-bottom: 5px;
 	padding: 1px 5px 3px 10px;
@@ -82,11 +108,15 @@ h1 {
 h4 {
 	margin: 2px;
 	padding: 5px;
+
 }
 h3 {
 	font-size: 1em;
 	padding: 2px;
 	text-align: center;
+}
+.copyright {
+	margin-top: 10px;
 }
 
 }
@@ -114,14 +144,27 @@ h3 {
 
 }
 
+/**************** Minor 600px *****************/
+@media screen and (min-width: 600px) {
+	.image-container img {
+
+	}
+}
 
 /**************** 851px - 1200px *****************/
 @media screen and (min-width: 851px) {
-
+	
 }
 
 
-
+/**************** 1100px and larger *****************/
+@media screen and (min-width: 1100px) {
+	body {
+		width: 1100px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
 
 
 
